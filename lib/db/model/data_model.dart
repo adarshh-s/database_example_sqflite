@@ -12,6 +12,6 @@ class StudentModel {
     final name = map['name'] as String;
     final age = map['age'] as String;
 
-    return StudentModel(name: name, age: age, id: id);
+    return StudentModel(id: id, name: name, age: age);
   }
 }

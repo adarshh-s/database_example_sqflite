@@ -3,7 +3,7 @@ import 'package:database_example/screens/screen_main.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding;
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDatabase();
   runApp(const MyApp());
 }
