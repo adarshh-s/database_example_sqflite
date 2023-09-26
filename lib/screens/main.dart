@@ -1,14 +1,10 @@
-import 'package:database_example/db/model/data_model.dart';
+import 'package:database_example/db/functions/db_functions.dart';
 import 'package:database_example/screens/screen_main.dart';
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding;
-  await Hive.initFlutter();
-  if (!Hive.isAdapterRegistered(StudentModelAdapter().typeId)) {
-    Hive.registerAdapter(StudentModelAdapter());
-  }
+  await initializeDatabase();
   runApp(const MyApp());
 }
 
